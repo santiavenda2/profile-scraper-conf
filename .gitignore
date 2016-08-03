@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# temp files
+*~
+
+# exclude config files
+scraperconfig.cfg
