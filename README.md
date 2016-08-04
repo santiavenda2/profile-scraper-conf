@@ -11,11 +11,13 @@ Para que la aplicación funcione tiene que haber una instancia de mongodb corrie
 
 Para que el scraper de twiter funcione tenemos que obtener las credenciales de twitter y crear un archivo scraperconfig.cfg con la siguente info
 
+```
 [twitter]
 CONSUMER_KEY=<CONSUMER_KEY>
 CONSUMER_SECRET=<CONSUMER_SECRET>
 ACCESS_TOKEN=<ACCESS_TOKEN>
 ACCESS_TOKEN_SECRET=<ACCESS_TOKEN_SECRET>
+```
 
 
 ### Pasos para configurar la aplicacion el scraper
