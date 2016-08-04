@@ -64,10 +64,10 @@ Para iniciar la api
   $ export TWITPROF_SCRAPER_SETTINGS=scraperconfig.cfg
 2. Exportar variable de configuracion de la api (cambiar la direccion al directorio actual)
   
-$ export TWITPROF_API_SETTINGS=<current_dir>/config.cfg
+  $ export TWITPROF_API_SETTINGS=<current_dir>/config.cfg
 3. iniciar uwsgi
 
- $ uwsgi --ini uwsgi.ini
+  $ uwsgi --ini uwsgi.ini
 
 Testearlo accediendo a:
 
