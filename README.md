@@ -3,13 +3,25 @@
 
 ## Dependencias
 
-Para que la aplicación funcione tiene que haber una instancia de mongodb corriendo en su puerto default (27067) y una instancia de redis corriendo en (16379)
+Para que la aplicación funcione tiene que haber una instancia de mongodb
+corriendo en su puerto default (27067) y una instancia de redis corriendo
+en el puerto 16379.
+
+Para simular estos dos componentes utilizo dos imágenes preconfiguradas,
+que puede ser iniciadas con los siguientes comandos
+
+ * [Docker](https://docs.docker.com/engine/examples/mongodb/):
+ $ docker run -p 27017:27017 --name mongo3 -d mongo
+ * [Redis](https://hub.docker.com/_/redis/)
+ $ docker run -p 16379:6379 --name redis -d redis
+
 
 ## Deploy
 
 ### Configuración del Scraper de twitter
 
-Para que el scraper de twiter funcione tenemos que obtener las credenciales de twitter y crear un archivo scraperconfig.cfg con la siguente info
+Para que el scraper de twiter funcione tenemos que obtener las credenciales
+de twitter y crear un archivo scraperconfig.cfg con la siguente info
 
 ```
 [twitter]
@@ -24,7 +36,9 @@ ACCESS_TOKEN_SECRET=<ACCESS_TOKEN_SECRET>
 
 1. Bajar este repo
 
-  $ git clone https://github.com/santiavenda2/profile-scraper-conf.git
+  $ wget https://github.com/santiavenda2/profile-scraper-conf/archive/master.zip
+
+  $ unzip master.zip
 
   $ cd profile-scraper-conf
 
@@ -38,7 +52,8 @@ ACCESS_TOKEN_SECRET=<ACCESS_TOKEN_SECRET>
   
   $ pip install -r requirements.txt
 
-Con esto ya estamos listos para correr los dos componentes de nuestro servicio: la api rest y los workers de celery
+Con esto ya estamos listos para correr los dos componentes de nuestro servicio:
+la api rest y los workers de celery
 
 Para iniciar un worker
 
